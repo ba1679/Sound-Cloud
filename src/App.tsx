@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
+import RouteComponent from 'routes';
+import { createTheme, ThemeProvider } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#93dbc5',
+    },
+  },
+});
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CssBaseline>
+      <ThemeProvider theme={theme}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <RouteComponent />
+        </Suspense>
+      </ThemeProvider>
+    </CssBaseline>
   );
 }
 
