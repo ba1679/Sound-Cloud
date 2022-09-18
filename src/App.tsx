@@ -3,6 +3,7 @@ import './App.css';
 import RouteComponent from 'routes';
 import { createTheme, ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
+import 'i18n';
 
 const theme = createTheme({
   palette: {
