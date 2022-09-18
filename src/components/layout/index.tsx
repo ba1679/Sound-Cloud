@@ -20,7 +20,7 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
           <img src={headPhoneImg} alt='head phone' />
         </div>
       </Grid>
-      <Grid item md={7} sx={{ padding: '24px' }}>
+      <Grid item md={7} className={styles.rightForm} sx={{ flexDirection: 'column' }}>
         <img src={logoImg} alt='Sound Cloud' />
         {children}
         <div className={styles.appLink}>
